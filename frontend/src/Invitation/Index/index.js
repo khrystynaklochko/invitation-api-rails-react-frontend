@@ -21,6 +21,10 @@ class InvitationIndex extends Component {
             <tr>
               <th>No.</th>
               <th>Title</th>
+              <th>Office latitude</th>
+              <th>Offfice longitude</th>
+              <th>Search Radius</th>
+              <th>Guests Id:Name </th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -47,6 +51,7 @@ class InvitationIndex extends Component {
 
   renderTableBody() {
     return this.state.invitations.map(invitation => {
+      let Names= JSON.parse(invitation.names);
       return (
         <tr key={invitation.id}>
           <td>
@@ -54,6 +59,18 @@ class InvitationIndex extends Component {
           </td>
           <td>
             {invitation.title}
+          </td>
+          <td>
+            {invitation.latitude}
+          </td>
+          <td>
+            {invitation.longitude}
+          </td>
+          <td>
+            {invitation.range}
+          </td>
+          <td>
+            {Names}
           </td>
           <td>
             <button

@@ -61,6 +61,10 @@ RSpec.describe 'Invitations API', type: :request do
       it 'should return 201' do
         expect(response).to have_http_status(201)
       end
+
+      it 'should has names of users' do
+          expect(JSON.parse(json['names'])[0].count).to eq(16)
+      end
     end
 
     context 'request is invalid' do
@@ -96,6 +100,10 @@ RSpec.describe 'Invitations API', type: :request do
 
     context 'record exists' do
       before { put "/invitations/#{invitation_id}", params: attributes }
+
+      it 'should update the record' do
+          expect(json['title']).to eq('XX')
+      end
 
       it 'should update the record' do
           expect(json['title']).to eq('XX')

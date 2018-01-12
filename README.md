@@ -1,7 +1,7 @@
 # Solution
 ## Features:
 
-###### Customer list  could be uploaded with .txt file.
+###### Customer list could be uploaded with .txt file.
 ###### Simple form validations.
 ###### Multiple file upload.
 ###### Security configs with rack attack configuration (limit/request).You could also configure for CORS.

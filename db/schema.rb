@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112122159) do
+ActiveRecord::Schema.define(version: 20180112203744) do
 
   create_table "customer_lists", force: :cascade do |t|
     t.integer "invitation_id"
@@ -25,11 +25,12 @@ ActiveRecord::Schema.define(version: 20180112122159) do
 
   create_table "invitations", force: :cascade do |t|
     t.string "title"
-    t.float "latitude"
-    t.float "longitude"
-    t.integer "range"
+    t.float "latitude", default: 0.0
+    t.float "longitude", default: 0.0
+    t.integer "range", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "names"
   end
 
 end

@@ -10,8 +10,14 @@ class CustomerList < ApplicationRecord
                         url: "/system/:attachment/:id/:filename"
 
 
-  def file_contents
-     Paperclip.io_adapters.for(document).read
-   end
+  def get_customers(file_name)
+    customers = []
+    File.open("#{file_name}", "r") do |file|
+       file.each do |line|
+           customers << JSON.parse(line)
+       end
+    end
+    customers
+  end
 
 end
