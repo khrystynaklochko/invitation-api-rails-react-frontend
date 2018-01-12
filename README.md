@@ -1,24 +1,33 @@
-# README
+# Solution
+## Features:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###### Customer list  could be uploaded with .txt file.
+###### Simple form validations.
+###### Multiple file upload.
+###### Security configs with rack attack configuration (limit/request).You could also configure for CORS.
+###### Caching.
 
-Things you may want to cover:
+#### Important! for production files could be loaded to some cloud service.
 
-* Ruby version
+## To run server app:
 
-* System dependencies
+```bundle install
+bundle exec rake db:create (within bundle)
+bundle exec rake db:migrate
+redis-server
+bundle exec sidekiq
+bundle exec rails s
+```
+## To run server test suit:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bundle exec rake db:test:prepare
+redis-server
+bundle exec rspec
+```
+## To run frontend app:
+```
+cd frontend
+npm install
+npm start
+```
+## Algorithm:
