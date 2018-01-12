@@ -1,4 +1,4 @@
-class InvitationsCacheJobb < ApplicationJob
+class InvitationsCacheJob < ApplicationJob
   queue_as :default
 
   def perform(*_args)
