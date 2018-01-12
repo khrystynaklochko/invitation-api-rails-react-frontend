@@ -18,3 +18,5 @@
 !/tmp/.keep
 *.rdb
 .byebug_history
+/frontend/node_modules
+/public/system/customer_lists/*

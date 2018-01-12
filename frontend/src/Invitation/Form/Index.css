@@ -1,0 +1,53 @@
+div.InvitationForm div.inline-error {
+  padding: 5px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 4px 4px 4px 4px;
+  z-index: -1;
+  top: -2px;
+}
+
+div.InvitationForm ul.selected-customerLists {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+div.InvitationForm ul.selected-customerLists li {
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+div.InvitationForm ul.selected-customerLists li div.document {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+div.InvitationForm ul.selected-customerLists li div.document div.remove {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+  padding: 2.5;
+  width: 25px;
+  height: 25px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 1px #000;
+}
+
+div.InvitationForm ul.selected-customerLists li div.file-name {
+  text-align: center;
+  margin-top: 20px;
+  color: #999;
+}
