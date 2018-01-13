@@ -31,3 +31,8 @@ npm install
 npm start
 ```
 ## Algorithm:
+
+- After .txt file was successfully uploaded its being parsed.
+- Fetching customer lists in invitation.rb model.
+- Iterating over each customer list and calculating distance in location.rb Concern.
+-
